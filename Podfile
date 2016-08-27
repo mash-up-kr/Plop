@@ -6,5 +6,7 @@ target 'Plop' do
   use_frameworks!
 
   # Pods for Plop
-
+  pod 'Alamofire', '~> 3.0'
+  pod 'AlamofireObjectMapper'
+  pod 'AsyncSwift'
 end
