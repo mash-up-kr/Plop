@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import SwiftyUserDefaults
 
 class ShitListResponse: Mappable {
     
@@ -24,13 +25,13 @@ class ShitListResponse: Mappable {
 }
 
 class Status: Mappable {
-    var shitColor: String?
-    var shitType: String?
-    var score: String?
-    var shitAmount: String?
+    var shitColor: String? = "B"
+    var shitType: String? = "C"
+    var score: String? = "normal"
+    var shitAmount: String? = "C"
     var shitSec: Int?
-    var shitThick: String?
-    var shitDate: String?
+    var shitThick: String? = "A"
+    var shitDate: String? = "2016-08-29"
 
     var shitColorText: String {
         return ShitColor(rawValue: shitColor ?? "A")?.text ?? ShitColor.Black.text
@@ -111,6 +112,10 @@ class Status: Mappable {
         return shitDate?.componentsSeparatedByString("-") ?? ["", "", ""]
     }
     
+    init() {
+        
+    }
+    
     init(shitColor: String, shitType: String, score: String, shitAmount: String, shitSec: Int, shitThick: String, shitDate: String) {
         self.shitColor = shitColor
         self.shitType = shitType
@@ -166,3 +171,20 @@ enum ShitColor: String {
         }
     }
 }
+
+class Device {
+    static var uuid: String {
+        if let uuid = Defaults[.uuid] {
+            return uuid
+        } else {
+            let newUuid = UIDevice.currentDevice().identifierForVendor!.UUIDString
+            Defaults[.uuid] = newUuid
+            return newUuid
+        }
+    }
+}
+
+extension DefaultsKeys {
+    static let uuid = DefaultsKey<String?>("uuid")
+}
+
