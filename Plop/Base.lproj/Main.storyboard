@@ -147,7 +147,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="퐁당 일기" id="ezR-dT-fJE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HiF-6n-gi4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HiF-6n-gi4">
+                            <connections>
+                                <segue destination="Qjg-4H-Xd8" kind="presentation" modalPresentationStyle="currentContext" id="Nty-r2-d8x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="MainTableView" destination="iTU-kZ-pCz" id="OEu-XL-yd1"/>
@@ -156,6 +160,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYI-75-wuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1566" y="350.5"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="mG3-M5-Pl0">
+            <objects>
+                <viewControllerPlaceholder id="Qjg-4H-Xd8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38v-WU-1yS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034.5" y="173"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GPg-NL-Kbd">
