@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 25b27c6524445ec28f5fd459c4115867a5b2aae0
+PODS:
+  - Alamofire (3.4.1)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - AsyncSwift (1.7.3)
+  - ObjectMapper (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - AlamofireObjectMapper
+  - AsyncSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  AsyncSwift: f3ad5dd077bbd1477e7573e87071a532fedaca1a
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
+
+PODFILE CHECKSUM: 0a0b18571361a726adc5c42878aa7bcb25246f36
 
 COCOAPODS: 1.0.1

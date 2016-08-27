@@ -16,6 +16,11 @@
 		A7010421F8A50A8CCB7023C3 /* Pods_Plop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9147B5C9EA730446FC550AC1 /* Pods_Plop.framework */; };
 		C9099E5B1D71CFEC007F96FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9099E5A1D71CFEC007F96FB /* MainViewController.swift */; };
 		C9099E5D1D71D1DF007F96FB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9099E5C1D71D1DF007F96FB /* MainTableViewCell.swift */; };
+		C9099E631D71F69E007F96FB /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9099E621D71F69E007F96FB /* MusicViewController.swift */; };
+		C9099E681D71FF6D007F96FB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9099E671D71FF6D007F96FB /* Status.swift */; };
+		C9099E6A1D72050B007F96FB /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9099E691D72050B007F96FB /* AlamofireLogger.swift */; };
+		C9099E6C1D720554007F96FB /* Alamofire+Plop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9099E6B1D720554007F96FB /* Alamofire+Plop.swift */; };
+		C9099E6E1D72122B007F96FB /* qm1ru1-aac.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9099E6D1D72122B007F96FB /* qm1ru1-aac.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		9147B5C9EA730446FC550AC1 /* Pods_Plop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9099E5A1D71CFEC007F96FB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C9099E5C1D71D1DF007F96FB /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		C9099E621D71F69E007F96FB /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		C9099E671D71FF6D007F96FB /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		C9099E691D72050B007F96FB /* AlamofireLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireLogger.swift; sourceTree = "<group>"; };
+		C9099E6B1D720554007F96FB /* Alamofire+Plop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Plop.swift"; sourceTree = "<group>"; };
+		C9099E6D1D72122B007F96FB /* qm1ru1-aac.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "qm1ru1-aac.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 		80E4EBB61D71BEC80013DA5A /* Plop */ = {
 			isa = PBXGroup;
 			children = (
+				C9099E6D1D72122B007F96FB /* qm1ru1-aac.mp3 */,
 				80E4EBCC1D71C4B40013DA5A /* src */,
 				80E4EBCD1D71C50C0013DA5A /* res */,
 				80E4EBCE1D71C5170013DA5A /* lib */,
@@ -112,6 +123,8 @@
 		80E4EBCB1D71C4940013DA5A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C9099E691D72050B007F96FB /* AlamofireLogger.swift */,
+				C9099E6B1D720554007F96FB /* Alamofire+Plop.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 		80E4EBCF1D71C55D0013DA5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C9099E671D71FF6D007F96FB /* Status.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -154,6 +168,7 @@
 		80E4EBD01D71C58E0013DA5A /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				C9099E611D71F683007F96FB /* Music */,
 				C9099E591D71CF9D007F96FB /* Main */,
 				80E4EBB91D71BEC80013DA5A /* ViewController.swift */,
 			);
@@ -167,6 +182,14 @@
 				C9099E5C1D71D1DF007F96FB /* MainTableViewCell.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		C9099E611D71F683007F96FB /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				C9099E621D71F69E007F96FB /* MusicViewController.swift */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E4EBD21D71CDD50013DA5A /* ShitCreate.storyboard in Resources */,
+				C9099E6E1D72122B007F96FB /* qm1ru1-aac.mp3 in Resources */,
 				80E4EBC21D71BEC80013DA5A /* LaunchScreen.storyboard in Resources */,
 				80E4EBBF1D71BEC80013DA5A /* Assets.xcassets in Resources */,
 				80E4EBBD1D71BEC80013DA5A /* Main.storyboard in Resources */,
@@ -293,9 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9099E5B1D71CFEC007F96FB /* MainViewController.swift in Sources */,
+				C9099E6A1D72050B007F96FB /* AlamofireLogger.swift in Sources */,
+				C9099E631D71F69E007F96FB /* MusicViewController.swift in Sources */,
 				80E4EBBA1D71BEC80013DA5A /* ViewController.swift in Sources */,
 				C9099E5D1D71D1DF007F96FB /* MainTableViewCell.swift in Sources */,
+				C9099E6C1D720554007F96FB /* Alamofire+Plop.swift in Sources */,
 				80E4EBB81D71BEC80013DA5A /* AppDelegate.swift in Sources */,
+				C9099E681D71FF6D007F96FB /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,8 @@ class MainTableViewCell: UITableViewCell {
     
     @IBOutlet weak var statusImageView: UIImageView!
 
+    @IBOutlet weak var statusImageLabel: UILabel!
+    
     @IBOutlet weak var statusLabel: UILabel!
     
     
