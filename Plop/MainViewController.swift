@@ -22,30 +22,46 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Async.background {
-            let response = Alamofire.request(.GET, "http://118.131.253.37:8080/constipation/shit/shit_list")
+            let uuid = Device.uuid
+            let parameters = ["userKey" : uuid]
+            let response = Alamofire.request(.GET, "http://118.131.253.37:8080/constipation/shit/shit_list", parameters: parameters, encoding: .URL)
                 .log(level: .Verbose)
                 .responseObject() as Response<ShitListResponse, NSError>
             
             if response.result.isSuccess {
-                print(response.result.value?.data?.first)
-                
                 Async.main {
                     self.statuses = response.result.value?.data ?? []
                     if self.statuses.isEmpty {
-                        //self.defaultView.hidden = false
+                        self.defaultView.hidden = false
                     } else {
-                        //self.defaultView.hidden = true
+                        self.defaultView.hidden = true
                     }
                     self.MainTableView.reloadData()
                 }
             }
+            
+//            self.create(status: Status())
         }
-        
-        
-        
-        
-        
-      // Do any additional setup after loading the view.
+    }
+    
+    func create(status status: Status) {
+        Async.background {
+            let uuid = Device.uuid
+            var parameters = status.toJSON()
+            parameters["userKey"] = uuid
+            let response = Alamofire.request(.POST, "http://118.131.253.37:8080/constipation/shit/shit_add", parameters: parameters, encoding: .URL)
+                .log(level: .Verbose)
+                .responseString()
+            
+            if response.result.isSuccess {
+                Async.main {
+                    print("만들기 성공")
+                }
+            } else {
+                print("만들기 실패")
+            }
+
+        }
     }
 
     override func didReceiveMemoryWarning() {

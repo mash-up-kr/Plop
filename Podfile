@@ -9,4 +9,5 @@ target 'Plop' do
   pod 'Alamofire', '~> 3.0'
   pod 'AlamofireObjectMapper'
   pod 'AsyncSwift'
+  pod 'SwiftyUserDefaults'
 end
